@@ -1,6 +1,6 @@
 from Connection import *
-import psycopg2
 
+# parameter nda perlu menyesuaikan tablenya parameter dikosongn aja
 def update_admin(admin):
     id_pengepul =       input("Masukkan Id Pengepul       : ")
     nama =              input("Masukkan Nama Pengepul     : ") 
