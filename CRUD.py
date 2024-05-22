@@ -1,3 +1,5 @@
+from Connection import *
+import psycopg2
 
 def update_admin(admin):
     id_pengepul =       input("Masukkan Id Pengepul       : ")
