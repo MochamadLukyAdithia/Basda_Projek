@@ -1,7 +1,7 @@
 #<<<<<<< HEAD
+from Tools.Connection import *
 
-
-def delete_pengepul(admin):
+def delete_pengepul():
     read_admin(cur)
     id_pengepul = input('Masukkan id pengepul yang ingin dihapus: ') 
     delete_pengepul = f"DELETE FROM admin WHERE id_pengepul = {id_pengepul}"
@@ -10,7 +10,7 @@ def delete_pengepul(admin):
     conn.commit()
     print(f"total baris yang dihapus: {cur.rowcount}")
 
-from Connection import *
+
 
 def update_admin():
     id_pengepul =       input("Masukkan Id Pengepul       : ")
@@ -333,25 +333,27 @@ def read_kualitas_kopi():
     cur.execute(query)
     data = cur.fetchall()
     for i in data:
+    
         print(i)
+    
     cur.close()
     conn.close()
 
-total_input = int(input(f"Ingin menambahkan berapa data?: "))
+# total_input = int(input(f"Ingin menambahkan berapa data?: "))
 
-for i in range(total_input):
-    id_kualitas = input(f"Masukkan id kualitas: ")
-    nama_kualitas = int(input(f"Masukkan nama kualitas: "))
-    deskripsi = int(input(f"Masukkan deskripsi: "))
-    query_read_kualitas_kopi = f"INSERT INTO nama_kualitas = {nama_kualitas}, deskripsi = {deskripsi}, WHERE Id_Kualitas = {id_kualitas}"
+# for i in range(total_input):
+#     id_kualitas = input(f"Masukkan id kualitas: ")
+#     nama_kualitas = int(input(f"Masukkan nama kualitas: "))
+#     deskripsi = int(input(f"Masukkan deskripsi: "))
+#     query_read_kualitas_kopi = f"INSERT INTO nama_kualitas = {nama_kualitas}, deskripsi = {deskripsi}, WHERE Id_Kualitas = {id_kualitas}"
    
-    cur.execute(query_read_kualitas_kopi) 
+#     cur.execute(query_read_kualitas_kopi) 
 
-    conn.commit()
+#     conn.commit()
 
-    read_kualitas_kopi(cur)
-    cur.close()
-    conn.close()
+#     read_kualitas_kopi(cur)
+#     cur.close()
+#     conn.close()
 
 
 def read_pegawai_penjemputan(cur):    
@@ -363,21 +365,21 @@ def read_pegawai_penjemputan(cur):
     cur.close()
     conn.close()
 
-for i in range(total_input):
-    id_pegawai = input(f"Masukkan id pegawai: ")
-    nama_pegawai = int(input(f"Masukkan nama pegawai: "))
-    no_telepon = int(input(f"Masukkan no telepon: "))
-    admin_id_pengepul = int(input(f"Masukkan admin id pengepul: "))
-    alamat = int(input(f"Masukkan alamat: "))
-    query_read_pegawai_penjemputan = f"INSERT INTO nama_kualitas = {nama_kualitas}, deskripsi = {deskripsi}, WHERE Id_pegawai = {id_pegawai}"
+# for i in range(total_input):
+#     id_pegawai = input(f"Masukkan id pegawai: ")
+#     nama_pegawai = int(input(f"Masukkan nama pegawai: "))
+#     no_telepon = int(input(f"Masukkan no telepon: "))
+#     admin_id_pengepul = int(input(f"Masukkan admin id pengepul: "))
+#     alamat = int(input(f"Masukkan alamat: "))
+#     query_read_pegawai_penjemputan = f"INSERT INTO nama_kualitas = {nama_kualitas}, deskripsi = {deskripsi}, WHERE Id_pegawai = {id_pegawai}"
    
-    cur.execute(query_read_pegawai_penjemputan) 
+#     cur.execute(query_read_pegawai_penjemputan) 
 
-    conn.commit()
+#     conn.commit()
 
-    read_pegawai_penjemputan(cur)
-    cur.close()
-    conn.close()
+#     read_pegawai_penjemputan(cur)
+#     cur.close()
+#     conn.close()
 
 
 def read_pembayaran(cur):    
@@ -389,19 +391,19 @@ def read_pembayaran(cur):
     cur.close()
     conn.close()
 
-for i in range(total_input):
-    id_pembayaran = input(f"Masukkan id pembayaran: ")
-    metode_pembayaran = int(input(f"Masukkan metode pembayaran: "))
-    deskripsi = int(input(f"Masukkan deskripsi: "))
-    query_read_pembayaran = f"INSERT INTO nama_kualitas = {nama_kualitas}, deskripsi = {deskripsi}, WHERE Id_Pembayaran = {id_pembayaran}"
+# for i in range(total_input):
+#     id_pembayaran = input(f"Masukkan id pembayaran: ")
+#     metode_pembayaran = int(input(f"Masukkan metode pembayaran: "))
+#     deskripsi = int(input(f"Masukkan deskripsi: "))
+#     query_read_pembayaran = f"INSERT INTO nama_kualitas = {nama_kualitas}, deskripsi = {deskripsi}, WHERE Id_Pembayaran = {id_pembayaran}"
    
-    cur.execute(query_read_pembayaran) 
+#     cur.execute(query_read_pembayaran) 
 
-    conn.commit()
+#     conn.commit()
 
-    read_pembayaran(cur)
-    cur.close()
-    conn.close()
+#     read_pembayaran(cur)
+#     cur.close()
+#     conn.close()
 
 
 def read_service(cur):    
@@ -413,19 +415,19 @@ def read_service(cur):
     cur.close()
     conn.close()
 
-for i in range(total_input):
-    id_layanan = input(f"Masukkan id layanan: ")
-    nama_layanan = int(input(f"Masukkan nama layanan: "))
-    deskripsi = int(input(f"Masukkan deskripsi: "))
-    query_read_service = f"INSERT INTO nama_kualitas = {nama_kualitas}, deskripsi = {deskripsi}, WHERE Id_Layanan = {id_layanan}"
+# for i in range(total_input):
+#     id_layanan = input(f"Masukkan id layanan: ")
+#     nama_layanan = int(input(f"Masukkan nama layanan: "))
+#     deskripsi = int(input(f"Masukkan deskripsi: "))
+#     query_read_service = f"INSERT INTO nama_kualitas = {nama_kualitas}, deskripsi = {deskripsi}, WHERE Id_Layanan = {id_layanan}"
    
-    cur.execute(query_read_service) 
+#     cur.execute(query_read_service) 
 
-    conn.commit()
+#     conn.commit()
 
-    read_kualitas_kopi(cur)
-    cur.close()
-    conn.close()
+#     read_kualitas_kopi(cur)
+#     cur.close()
+#     conn.close()
 
 
 def read_status_penjemputan(cur):    
@@ -437,18 +439,18 @@ def read_status_penjemputan(cur):
     cur.close()
     conn.close()
 
-for i in range(total_input):
-    id_status_penjemputan = input(f"Masukkan id status penjemputan: ")
-    nama_kualitas = int(input(f"Masukkan nama status: "))
-    query_read_status_penjemputan = f"INSERT INTO id_status = {id_status_penjemputan}, nama_kualitas = {nama_kualitas}, WHERE Id_Status_Penjemputan = {id_status_penjemputan}"
+# for i in range(total_input):
+#     id_status_penjemputan = input(f"Masukkan id status penjemputan: ")
+#     nama_kualitas = int(input(f"Masukkan nama status: "))
+#     query_read_status_penjemputan = f"INSERT INTO id_status = {id_status_penjemputan}, nama_kualitas = {nama_kualitas}, WHERE Id_Status_Penjemputan = {id_status_penjemputan}"
    
-    cur.execute(query_read_status_penjemputan) 
+#     cur.execute(query_read_status_penjemputan) 
 
-    conn.commit()
+#     conn.commit()
 
-    read_status_penjemputan(cur)
-    cur.close()
-    conn.close()
+#     read_status_penjemputan(cur)
+#     cur.close()
+#     conn.close()
 
 
 def read_transaksi(cur):    
@@ -460,26 +462,26 @@ def read_transaksi(cur):
     cur.close()
     conn.close()
 
-for i in range(total_input):
-    id_transaksi = input(f"Masukkan id transaksi: ")
-    deskripsi = int(input(f"Masukkan deskripsi: "))
-    user_id_petani = int(input(f"Masukkan user id petani: "))
-    pembayaran_id_pembayaran = int(input(f"Masukkan pembyaran id pembayaran: "))
-    gudang_kode_gudang = int(input(f"Masukkan gudang kode gudang: "))
-    kopi_id_kopi = int(input(f"Masukkan kopi id kopi: "))
-    service_id_layanan = int(input(f"Masukkan service id layanan: "))
-    pegawai_penjemputan_id_pegawai = int(input(f"Masukkan pegawai penjemputan id pegawai: "))
-    kualitas_kopi_id_kualitas = int(input(f"Masukkan kualitas kopi id kualitas: "))
-    jadwal_penjemputan_id_penjemputan = int(input(f"Masukkan jadwal penjemputan id penjemputan: "))
-    query_read_transaksi = f"INSERT INTO id_transaksi = {id_transaksi}, deskripsi = {deskripsi}, user_id_petani = {user_id_petani}, pembayaran_id_pembayaran = {pembayaran_id_pembayaran}, gudang_kode_gudang = {gudang_kode_gudang}, kopi_id_kopi = {kopi_id_kopi}, service_id_layanan = {service_id_layanan}, pegawai_penjemputan_id_pegawai,WHERE Id_Transaksi = {id_transaksi}"
+# for i in range(total_input):
+#     id_transaksi = input(f"Masukkan id transaksi: ")
+#     deskripsi = int(input(f"Masukkan deskripsi: "))
+#     user_id_petani = int(input(f"Masukkan user id petani: "))
+#     pembayaran_id_pembayaran = int(input(f"Masukkan pembyaran id pembayaran: "))
+#     gudang_kode_gudang = int(input(f"Masukkan gudang kode gudang: "))
+#     kopi_id_kopi = int(input(f"Masukkan kopi id kopi: "))
+#     service_id_layanan = int(input(f"Masukkan service id layanan: "))
+#     pegawai_penjemputan_id_pegawai = int(input(f"Masukkan pegawai penjemputan id pegawai: "))
+#     kualitas_kopi_id_kualitas = int(input(f"Masukkan kualitas kopi id kualitas: "))
+#     jadwal_penjemputan_id_penjemputan = int(input(f"Masukkan jadwal penjemputan id penjemputan: "))
+#     query_read_transaksi = f"INSERT INTO id_transaksi = {id_transaksi}, deskripsi = {deskripsi}, user_id_petani = {user_id_petani}, pembayaran_id_pembayaran = {pembayaran_id_pembayaran}, gudang_kode_gudang = {gudang_kode_gudang}, kopi_id_kopi = {kopi_id_kopi}, service_id_layanan = {service_id_layanan}, pegawai_penjemputan_id_pegawai,WHERE Id_Transaksi = {id_transaksi}"
    
-    cur.execute(query_read_transaksi) 
+#     cur.execute(query_read_transaksi) 
 
-    conn.commit()
+#     conn.commit()
 
-    read_transaksi(cur)
-    cur.close()
-    conn.close()
+#     read_transaksi(cur)
+#     cur.close()
+#     conn.close()
 
 # SELECT USER
 def read_User(cur):    
@@ -491,24 +493,24 @@ def read_User(cur):
     cur.close()
     conn.close()
 
-total_input = int(input(f"Ingin menambahkan berapa data?: "))
+# total_input = int(input(f"Ingin menambahkan berapa data?: "))
 
-for i in range(total_input):
-    id_petani = int(input(f"Masukkan Id petani: "))
-    nama = input(f"Masukkan nama petani: ")
-    password_user = input(f"Masukkan password: ")
-    email = input(f"Masukkan email")
-    nomor_telepon = int(input("nomor telepon"))
-    deskripsi = input(f"Masukkan deskripsi")
-    query = f"INSERT INTO User(id_petani, nama, password_user, email, nomor_telepon, deskripsi) VALUES('{id_petani}', {nama}, {password_user}, {email}, {nomor_telepon}, {deskripsi})"
-    # query = f"INSERT INTO User(id_petani, nama, password_user, email, nomor_telepon, deskripsi) VALUES(%s, %s, %s)"
-    cur.execute(query, (id_petani, nama, password_user, email, nomor_telepon, deskripsi))
+# for i in range(total_input):
+#     id_petani = int(input(f"Masukkan Id petani: "))
+#     nama = input(f"Masukkan nama petani: ")
+#     password_user = input(f"Masukkan password: ")
+#     email = input(f"Masukkan email")
+#     nomor_telepon = int(input("nomor telepon"))
+#     deskripsi = input(f"Masukkan deskripsi")
+#     query = f"INSERT INTO User(id_petani, nama, password_user, email, nomor_telepon, deskripsi) VALUES('{id_petani}', {nama}, {password_user}, {email}, {nomor_telepon}, {deskripsi})"
+#     # query = f"INSERT INTO User(id_petani, nama, password_user, email, nomor_telepon, deskripsi) VALUES(%s, %s, %s)"
+#     cur.execute(query, (id_petani, nama, password_user, email, nomor_telepon, deskripsi))
 
-    conn.commit()
+#     conn.commit()
 
-    read_User(cur)
-    cur.close()
-    conn.close()
+#     read_User(cur)
+#     cur.close()
+#     conn.close()
 
 # SELECT ADMIN
 def read_admin(cur):
@@ -520,23 +522,23 @@ def read_admin(cur):
     cur.close()
     conn.close()
 
-total_input = int(input(f"Ingin menambahkan berapa data?: "))
+# total_input = int(input(f"Ingin menambahkan berapa data?: "))
 
-for i in range(total_input):
-    id_pengepul = int(input(f"Masukkan Id pengepul: "))
-    nama = input(f"Masukkan nama pengepul: ")
-    password_admin = input(f"Masukkan password admin: ")
-    email = input(f"Masukkan email: ")
-    nomor_telepon = int(input(f"Masukkan nomor telepon: "))
-    deskripsi1 = input(f"Masukkan deskripsi: ")
-    # query = f"INSERT INTO admin(id_pengepul, nama, password_admin, email, nomor_telepon, deskripsi1) VALUES(%s, %s, %s)"
-    cur.execute(query, (id_pengepul, nama, password_admin, email, nomor_telepon, deskripsi1))
+# for i in range(total_input):
+#     id_pengepul = int(input(f"Masukkan Id pengepul: "))
+#     nama = input(f"Masukkan nama pengepul: ")
+#     password_admin = input(f"Masukkan password admin: ")
+#     email = input(f"Masukkan email: ")
+#     nomor_telepon = int(input(f"Masukkan nomor telepon: "))
+#     deskripsi1 = input(f"Masukkan deskripsi: ")
+#     # query = f"INSERT INTO admin(id_pengepul, nama, password_admin, email, nomor_telepon, deskripsi1) VALUES(%s, %s, %s)"
+#     cur.execute(query, (id_pengepul, nama, password_admin, email, nomor_telepon, deskripsi1))
 
-    conn.commit()
+#     conn.commit()
 
-    read_admin(cur)
-    cur.close()
-    conn.close()
+#     read_admin(cur)
+#     cur.close()
+#     conn.close()
 
 # SELECT CASH
 def read_cash(cur):
@@ -548,19 +550,19 @@ def read_cash(cur):
     cur.close()
     conn.close()
 
-for i in range(total_input):
-    id_pembayaran = int(input(f"Masukkan id pembayaran: "))
-    id_cash = int(input(f"Masukkan id cash: "))
-    nomor_telepon = int(input(f"Masukkan nomor telepon: "))
-    jumlah_pembayaran = int(input(f"Masukkan jumlsh pembayaran: "))   
-    # query = f"INSERT INTO User(id_pembayaran, id_cash, nomor_telepon, jumlah_pembayaran) VALUES(%s, %s, %s)"
-    cur.execute(query, (id_pembayaran, id_cash, nomor_telepon, jumlah_pembayaran))
+# for i in range(total_input):
+#     id_pembayaran = int(input(f"Masukkan id pembayaran: "))
+#     id_cash = int(input(f"Masukkan id cash: "))
+#     nomor_telepon = int(input(f"Masukkan nomor telepon: "))
+#     jumlah_pembayaran = int(input(f"Masukkan jumlsh pembayaran: "))   
+#     # query = f"INSERT INTO User(id_pembayaran, id_cash, nomor_telepon, jumlah_pembayaran) VALUES(%s, %s, %s)"
+#     cur.execute(query, (id_pembayaran, id_cash, nomor_telepon, jumlah_pembayaran))
 
-    conn.commit()
+#     conn.commit()
 
-    read_cash(cur)
-    cur.close()
-    conn.close()
+#     read_cash(cur)
+#     cur.close()
+#     conn.close()
 
 # SELECT DEBIT
 def read_debit(cur):
@@ -572,21 +574,21 @@ def read_debit(cur):
     cur.close()
     conn.close()
 
-for i in range(total_input):
-    id_pembayaran = int(input(f"Masukkan Id pembayaran: "))
-    id_debit = int(input(f"Masukkan Id debit: "))
-    nama_pemilik = input(f"Masukkan nama pemilik: ")
-    nama_bank = input(f"Masukkan nama bank: ")
-    nomor_rekening = int(input(f"Masukkan Id pengepul: "))
+# for i in range(total_input):
+#     id_pembayaran = int(input(f"Masukkan Id pembayaran: "))
+#     id_debit = int(input(f"Masukkan Id debit: "))
+#     nama_pemilik = input(f"Masukkan nama pemilik: ")
+#     nama_bank = input(f"Masukkan nama bank: ")
+#     nomor_rekening = int(input(f"Masukkan Id pengepul: "))
     
-# query = f"INSERT INTO debit(id_pembayaran, id_debit, nama_pemilik, nama_bank, nomor_rekening) VALUES(%s, %s, %s)"
-    cur.execute(query, (id_pembayaran, id_debit, nama_pemilik, nama_bank, nomor_rekening))
+# # query = f"INSERT INTO debit(id_pembayaran, id_debit, nama_pemilik, nama_bank, nomor_rekening) VALUES(%s, %s, %s)"
+#     cur.execute(query, (id_pembayaran, id_debit, nama_pemilik, nama_bank, nomor_rekening))
 
-    conn.commit()
+#     conn.commit()
 
-    read_debit(cur)
-    cur.close()
-    conn.close()
+#     read_debit(cur)
+#     cur.close()
+#     conn.close()
 
 # SELECT GUDANG
 def read_gudang(cur):
@@ -598,19 +600,19 @@ def read_gudang(cur):
     cur.close()
     conn.close()
 
-for i in range(total_input):
-    kode_gudang = int(input(f"Masukkan kode gudang: "))
-    kapasitas = int(input(f"Masukkan kapasitas: "))
-    deskripsi = input(f"Masukkan deskripsi: ")
+# for i in range(total_input):
+#     kode_gudang = int(input(f"Masukkan kode gudang: "))
+#     kapasitas = int(input(f"Masukkan kapasitas: "))
+#     deskripsi = input(f"Masukkan deskripsi: ")
 
-    # query = f"INSERT INTO gudang(kode_gudang, kapasitas, deskripsi) VALUES(%s, %s, %s)"
-    cur.execute(query, (kode_gudang, kapasitas, deskripsi))
+#     # query = f"INSERT INTO gudang(kode_gudang, kapasitas, deskripsi) VALUES(%s, %s, %s)"
+#     cur.execute(query, (kode_gudang, kapasitas, deskripsi))
 
-    conn.commit()
+#     conn.commit()
 
-    read_gudang(cur)
-    cur.close()
-    conn.close()
+#     read_gudang(cur)
+#     cur.close()
+#     conn.close()
 
 # SELECT JADWAL PENJEMPUTAN
 def read_jadwal_penjemputan(cur):
@@ -622,17 +624,26 @@ def read_jadwal_penjemputan(cur):
     cur.close()
     conn.close()
 
-for i in range(total_input):
-    id_penjemputan = int(input(f"Masukkan Id penjeputan: "))
-    waktu_penjemputan = input(f"Masukkan waktu penjemputan: ")
-    status_penjemputan = int(input(f"Masukkan status penjemputan: "))
+# for i in range(total_input):
+#     id_penjemputan = int(input(f"Masukkan Id penjeputan: "))
+#     waktu_penjemputan = input(f"Masukkan waktu penjemputan: ")
+#     status_penjemputan = int(input(f"Masukkan status penjemputan: "))
 
-    # query = f"INSERT INTO penjemputan(id_penjemputan, waktu_penjemputan, status_penjemputan) VALUES(%s, %s, %s)"
-    cur.execute(query, (id_penjemputan, waktu_penjemputan, status_penjemputan))
+#     # query = f"INSERT INTO penjemputan(id_penjemputan, waktu_penjemputan, status_penjemputan) VALUES(%s, %s, %s)"
+#     cur.execute(query, (id_penjemputan, waktu_penjemputan, status_penjemputan))
 
+#     conn.commit()
+
+#     read_jadwal_penjemputan(cur)
+#     cur.close()
+#     conn.close()
+
+def tambah_kualitas():
+    id_kualitas = int(input(f"Masukkan Id kualitas: "))
+    kualitas = input(f"Masukkan kualitas: ")
+    deskripsi = input(f"Masukkan deskripsi: ")
+    query = f"INSERT INTO kualitas_kopi(id_kualitas, nama_kualitas, deskripsi) VALUES(%s, %s, %s)"
+    cur.execute(query, (id_kualitas, kualitas, deskripsi))
     conn.commit()
-
-    read_jadwal_penjemputan(cur)
     cur.close()
     conn.close()
-
