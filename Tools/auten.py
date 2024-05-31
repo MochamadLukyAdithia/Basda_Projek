@@ -9,7 +9,7 @@ class Pengepul:
             print("Login Berhasil")
             p.DevPengepul.show()
         else:
-            
+
                 print("Login Gagal")
                 
                 
