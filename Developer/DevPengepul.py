@@ -9,6 +9,7 @@ class DevPengepul:
         print("2. Update Harga")
         print("3. Lihat Request")
         print("4. Insert")
+        print("5.  Atur Penjemputan")
         pilih = int(input("Masukkan Pilihan Anda : "))
         if pilih == 1:
             print(f"Harga Kopi Saat Ini {DevPengepul.harga[0]}")
@@ -18,6 +19,8 @@ class DevPengepul:
             print("Request Pilihan")
         elif pilih == 4:
             display.menu_crud()
+        elif pilih == 5:
+            DevJadwalpenjemputan.atur_penjemputan()
         else:
             print("Pilihan Tidak Tersedia")
 
@@ -73,3 +76,51 @@ class display:
             CRUD.read_kualitas_kopi()
         elif chociate == 2:
             display.menu_crud()
+            
+class DevJadwalpenjemputan:
+    schedules = []
+
+    @staticmethod
+    def atur_penjemputan():
+        print("Menu Atur Penjemputan")
+        print("1. Tambah Penjemputan")
+        print("2. Lihat Penjemputan")
+        print("3. Kembali")
+        pilih = int(input("Masukkan Pilihan Anda : "))
+        if pilih == 1:
+            DevJadwalpenjemputan.tambah_penjemputan()
+        elif pilih == 2:
+            DevJadwalpenjemputan.lihat_penjemputan()
+        elif pilih == 3:
+            DevPengepul.show()
+        else:
+            print("Pilihan Tidak Tersedia")
+
+    @staticmethod
+    def tambah_penjemputan():
+        petani = input("Masukkan nama petani: ")
+        tanggal = input("Masukkan tanggal penjemputan (YYYY-MM-DD): ")
+        waktu = input("Masukkan waktu penjemputan (HH:MM): ")
+        lokasi = input("Masukkan lokasi penjemputan: ")
+        catatan = input("Masukkan catatan tambahan: ")
+
+        schedule = {
+            "petani": petani,
+            "tanggal": tanggal,
+            "waktu": waktu,
+            "lokasi": lokasi,
+            "catatan": catatan
+        }
+
+        DevJadwalpenjemputan.jadwal.append(jadwal)
+        print("Penjemputan berhasil ditambahkan.")
+        DevJadwalpenjemputan.atur_penjemputan()
+
+    @staticmethod
+    def lihat_penjemputan():
+        if DevJadwalpenjemputan.jadwal:
+            for idx, schedule in enumerate(DevJadwalpenjemputan.jadwal):
+                print(f"{idx+1}. Petani: {jadwal['petani']}, Tanggal: {jadwal['tanggal']}, Waktu: {jadwal['waktu']}, Lokasi: {jadwal['lokasi']}, Catatan: {jadwal['catatan']}")
+        else:
+            print("Belum ada jadwal penjemputan.")
+        DevJadwalpenjemputan.atur_penjemputan()
